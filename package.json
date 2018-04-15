@@ -5,9 +5,14 @@
   "repository": "git@github.com:ElijahPrince73/muber.git",
   "author": "Elijah Prince <elijahprince73@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "nodemon --exec 'mocha --recursive -R min'"
+  },
   "dependencies": {
     "express": "^4.16.3",
     "mocha": "^5.1.0",
-    "mongoose": "^5.0.14"
+    "mongoose": "^5.0.14",
+    "nodemon": "^1.17.3",
+    "supertest": "^3.0.0"
   }
 }
