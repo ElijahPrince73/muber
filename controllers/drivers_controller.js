@@ -5,9 +5,7 @@ module.exports = {
 		})
 	},
 	create(req, res) {
-		console.log('Something here', req.body);
-		res.send({
-			hi: 'there'
-		})
+		console.log(req.body);
+		res.send(req.body)
 	}
 }

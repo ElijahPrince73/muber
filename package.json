@@ -6,6 +6,7 @@
   "author": "Elijah Prince <elijahprince73@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "node index.js",
     "test": "nodemon --exec 'mocha --recursive -R min'"
   },
   "dependencies": {
