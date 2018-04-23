@@ -6,7 +6,9 @@ const app = express()
 
 // Connection to server
 mongoose.Promise = Promise
-mongoose.connect('mongodb://localhost/muber')
+if (process.env.NODE_ENV !== 'test') {
+	mongoose.connect('mongodb://localhost/muber')
+}
 // This line needs to be above routes()
 app.use(bodyParser.json());
 routes(app)
