@@ -1,10 +1,11 @@
 const Driver = require('../models/driver');
 
 module.exports = {
-	greeting(req, res) {
-		res.send({
-			hi: 'there'
-		})
+	getDrivers(req, res) {
+		Driver.find({})
+			.then((drivers) => {
+				res.send(drivers)
+			})
 	},
 	create(req, res) {
 		const driverProps = req.body
