@@ -13,4 +13,11 @@ if (process.env.NODE_ENV !== 'test') {
 app.use(bodyParser.json());
 routes(app)
 
+app.use((err, req, res, next) => {
+	console.log(JSON.stringify(err, undefined, 2));
+	res.status(422).send({
+		err: err.message
+	})
+})
+
 module.exports = app

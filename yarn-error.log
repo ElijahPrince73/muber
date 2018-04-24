@@ -22,7 +22,8 @@ npm manifest:
     "author": "Elijah Prince <elijahprince73@gmail.com>",
     "license": "MIT",
     "scripts": {
-      "test": "nodemon --exec 'mocha --recursive -R min'"
+      "dev": "nodemon index.js",
+      "test": "NODE_ENV=test nodemon --exec 'mocha --recursive -R min'"
     },
     "dependencies": {
       "body-parser": "^1.18.2",
